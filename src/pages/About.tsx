@@ -4,25 +4,25 @@ import { Users, Target, Award, BookOpen, Globe, Heart } from 'lucide-react';
 const About: React.FC = () => {
   const teamMembers = [
     {
-      name: 'Dr. Sarah Chen',
-      role: 'Founder & Lead Mathematician',
-      description: 'Ph.D. in Pure Mathematics from MIT, specializing in Number Theory and Mathematical Analysis.',
-      expertise: ['Number Theory', 'Analysis', 'Research']
+      name: 'Ing. Portilla Salazar',
+      role: 'Founder & Lead Software Engineer',
+      description: 'Experienced software engineer with a passion for building innovative mathematical applications.',
+      expertise: ['Software Development', 'Mathematical Applications', 'Innovation']
     },
     {
-      name: 'Prof. Michael Rodriguez',
+      name: 'Prof. Jorge Ramirez',
       role: 'Education Director',
       description: 'Professor of Mathematics Education with 15+ years of experience in curriculum development.',
       expertise: ['Education', 'Curriculum', 'Pedagogy']
     },
     {
-      name: 'Dr. Emily Watson',
+      name: 'Dra. Alessandra Jacqueline',
       role: 'Research Coordinator',
       description: 'Computational mathematician focused on applied mathematics and mathematical modeling.',
       expertise: ['Applied Math', 'Modeling', 'Computing']
     },
     {
-      name: 'James Liu',
+      name: 'Jhon Doe',
       role: 'Content Manager',
       description: 'Mathematics communicator passionate about making complex concepts accessible to everyone.',
       expertise: ['Communication', 'Writing', 'Outreach']
