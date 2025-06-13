@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /content
+Allow: /articles/*
+Allow: /news/*
+
+Disallow: /admin
+Disallow: /private
+Disallow: /*.pdf$
+Disallow: /temp/
+
+Sitemap: https://mathverse.example.com/sitemap.xml
+
+Crawl-delay: 1
+
+# Allow common search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
