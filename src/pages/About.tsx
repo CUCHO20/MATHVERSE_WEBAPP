@@ -22,7 +22,7 @@ const About: React.FC = () => {
       expertise: ['Applied Math', 'Modeling', 'Computing']
     },
     {
-      name: 'Jhon Doe',
+      name: 'Jesús Héctor',
       role: 'Content Manager',
       description: 'Mathematics communicator passionate about making complex concepts accessible to everyone.',
       expertise: ['Communication', 'Writing', 'Outreach']
