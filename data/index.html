@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designali Creative Suite</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Animated gradient background -->
+        <div class="animated-background"></div>
+
+        <!-- Mobile menu overlay -->
+        <div class="mobile-overlay" id="mobileOverlay"></div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="brand">
+                    <div class="brand-icon">
+                        <i data-lucide="syringe"></i>
+                    </div>
+                    <div class="brand-text">
+                        <h2>Corning</h2>
+                        <p>Epoxy Labeling Center</p>
+                    </div>
+                </div>
+                <button class="close-mobile-menu" id="closeMobileMenu">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+
+            <div class="search-container">
+                <div class="search-input-group">
+                    <span class="search-icon"><i data-lucide="search"></i></span>
+                    <input type="search" placeholder="Search...">
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-item active">
+                    <button class="nav-button">
+                        <div class="nav-content">
+                            <i data-lucide="home"></i>
+                            <span>Home</span>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="nav-item expandable">
+                    <button class="nav-button" data-expandable="apps">
+                        <div class="nav-content">
+                            <i data-lucide="grid-3x3"></i>
+                            <span>Apps</span>
+                        </div>
+                        <span class="badge">2</span>
+                        <i data-lucide="chevron-down" class="chevron"></i>
+                    </button>
+                    <div class="nav-submenu" id="apps-submenu">
+                        <a href="#" class="submenu-item">All Apps</a>
+                        <a href="#" class="submenu-item">Recent</a>
+                        <a href="#" class="submenu-item">Updates <span class="badge">2</span></a>
+                        <a href="#" class="submenu-item">Installed</a>
+                    </div>
+                </div>
+
+                <div class="nav-item expandable">
+                    <button class="nav-button" data-expandable="files">
+                        <div class="nav-content">
+                            <i data-lucide="file-text"></i>
+                            <span>Files</span>
+                        </div>
+                        <i data-lucide="chevron-down" class="chevron"></i>
+                    </button>
+                    <div class="nav-submenu" id="files-submenu">
+                        <a href="#" class="submenu-item">Recent</a>
+                        <a href="#" class="submenu-item">Shared with me <span class="badge">3</span></a>
+                        <a href="#" class="submenu-item">Favorites</a>
+                        <a href="#" class="submenu-item">Trash</a>
+                    </div>
+                </div>
+
+                <div class="nav-item expandable">
+                    <button class="nav-button" data-expandable="projects">
+                        <div class="nav-content">
+                            <i data-lucide="layers"></i>
+                            <span>Projects</span>
+                        </div>
+                        <span class="badge">4</span>
+                        <i data-lucide="chevron-down" class="chevron"></i>
+                    </button>
+                    <div class="nav-submenu" id="projects-submenu">
+                        <a href="#" class="submenu-item">Active Projects <span class="badge">4</span></a>
+                        <a href="#" class="submenu-item">Archived</a>
+                        <a href="#" class="submenu-item">Templates</a>
+                    </div>
+                </div>
+
+                <div class="nav-item expandable">
+                    <button class="nav-button" data-expandable="learn">
+                        <div class="nav-content">
+                            <i data-lucide="book-open"></i>
+                            <span>Learn</span>
+                        </div>
+                        <i data-lucide="chevron-down" class="chevron"></i>
+                    </button>
+                    <div class="nav-submenu" id="learn-submenu">
+                        <a href="#" class="submenu-item">Tutorials</a>
+                        <a href="#" class="submenu-item">Courses</a>
+                        <a href="#" class="submenu-item">Webinars</a>
+                        <a href="#" class="submenu-item">Resources</a>
+                    </div>
+                </div>
+
+                <div class="nav-item expandable">
+                    <button class="nav-button" data-expandable="community">
+                        <div class="nav-content">
+                            <i data-lucide="users"></i>
+                            <span>Community</span>
+                        </div>
+                        <i data-lucide="chevron-down" class="chevron"></i>
+                    </button>
+                    <div class="nav-submenu" id="community-submenu">
+                        <a href="#" class="submenu-item">Explore</a>
+                        <a href="#" class="submenu-item">Following</a>
+                        <a href="#" class="submenu-item">Challenges</a>
+                        <a href="#" class="submenu-item">Events</a>
+                    </div>
+                </div>
+
+                <div class="nav-item expandable">
+                    <button class="nav-button" data-expandable="resources">
+                        <div class="nav-content">
+                            <i data-lucide="bookmark"></i>
+                            <span>Resources</span>
+                        </div>
+                        <i data-lucide="chevron-down" class="chevron"></i>
+                    </button>
+                    <div class="nav-submenu" id="resources-submenu">
+                        <a href="#" class="submenu-item">Stock Photos</a>
+                        <a href="#" class="submenu-item">Fonts</a>
+                        <a href="#" class="submenu-item">Icons</a>
+                        <a href="#" class="submenu-item">Templates</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button class="footer-button">
+                    <i data-lucide="settings"></i>
+                    <span>Settings</span>
+                </button>
+                <button class="footer-button user-button">
+                    <div class="user-info">
+                        <div class="avatar">JD</div>
+                        <span>John Doe</span>
+                    </div>
+                    <span class="badge pro-badge">Pro</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+            <header class="header">
+                <button class="menu-toggle mobile-only" id="mobileMenuToggle">
+                    <i data-lucide="menu"></i>
+                </button>
+                <button class="sidebar-toggle desktop-only" id="sidebarToggle">
+                    <i data-lucide="panel-left"></i>
+                </button>
+
+                <h1 class="header-title">Designali Creative</h1>
+
+                <div class="header-actions">
+                    <button class="icon-button theme-color-picker" id="themeColorPicker" title="Change theme color">
+                        <i data-lucide="palette"></i>
+                    </button>
+                    <button class="icon-button theme-toggle" id="themeToggle" title="Toggle theme">
+                        <i data-lucide="sun" class="theme-icon light-icon"></i>
+                        <i data-lucide="moon" class="theme-icon dark-icon"></i>
+                    </button>
+                    <button class="icon-button" title="Cloud Storage">
+                        <i data-lucide="cloud"></i>
+                    </button>
+                    <button class="icon-button" title="Messages">
+                        <i data-lucide="message-square"></i>
+                    </button>
+                    <button class="icon-button notification-button" title="Notifications">
+                        <i data-lucide="bell"></i>
+                        <span class="notification-badge">5</span>
+                    </button>
+                    <div class="avatar user-avatar">JD</div>
+                </div>
+            </header>
+
+            <div class="content-area">
+                <!-- Tab Navigation -->
+                <div class="tab-navigation">
+                    <div class="tab-list">
+                        <button class="tab-button active" data-tab="home">Home</button>
+                        <button class="tab-button" data-tab="apps">Apps</button>
+                        <button class="tab-button" data-tab="files">Files</button>
+                        <button class="tab-button" data-tab="projects">Projects</button>
+                        <button class="tab-button" data-tab="learn">Learn</button>
+                    </div>
+                    <div class="tab-actions">
+                        <button class="btn btn-outline">
+                            <i data-lucide="download"></i>
+                            Install App
+                        </button>
+                        <button class="btn btn-primary">
+                            <i data-lucide="plus"></i>
+                            New Project
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="tab-content active" id="home-tab">
+                    <!-- Hero Section -->
+                    <section class="hero-section">
+                        <div class="hero-content">
+                            <span class="hero-badge">Premium</span>
+                            <h2>Welcome to DesignAli Creative Suite</h2>
+                            <p>Unleash your creativity with our comprehensive suite of professional design tools and
+                                resources.</p>
+                            <div class="hero-actions">
+                                <button class="btn btn-white">Explore Plans</button>
+                                <button class="btn btn-outline-white">Take a Tour</button>
+                            </div>
+                        </div>
+                        <div class="hero-animation">
+                            <div class="rotating-circles">
+                                <div class="circle circle-1"></div>
+                                <div class="circle circle-2"></div>
+                                <div class="circle circle-3"></div>
+                                <div class="circle circle-4"></div>
+                                <div class="circle circle-5"></div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Recent Apps -->
+                    <section class="section">
+                        <div class="section-header">
+                            <h2>Recent Apps</h2>
+                            <button class="btn btn-ghost">View All</button>
+                        </div>
+                        <div class="apps-grid" id="recentApps">
+                            <!-- Apps will be populated by JavaScript -->
+                        </div>
+                    </section>
+
+                    <!-- Recent Files and Projects -->
+                    <div class="two-column-layout">
+                        <section class="section">
+                            <div class="section-header">
+                                <h2>Recent Files</h2>
+                                <button class="btn btn-ghost">View All</button>
+                            </div>
+                            <div class="files-list" id="recentFiles">
+                                <!-- Files will be populated by JavaScript -->
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <div class="section-header">
+                                <h2>Active Projects</h2>
+                                <button class="btn btn-ghost">View All</button>
+                            </div>
+                            <div class="projects-list" id="activeProjects">
+                                <!-- Projects will be populated by JavaScript -->
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- Community Highlights -->
+                    <section class="section">
+                        <div class="section-header">
+                            <h2>Community Highlights</h2>
+                            <button class="btn btn-ghost">Explore</button>
+                        </div>
+                        <div class="community-grid" id="communityPosts">
+                            <!-- Community posts will be populated by JavaScript -->
+                        </div>
+                    </section>
+                </div>
+
+                <div class="tab-content" id="apps-tab">
+                    <section class="hero-section apps-hero">
+                        <div class="hero-content">
+                            <h2>Creative Apps Collection</h2>
+                            <p>Discover our full suite of professional design and creative applications.</p>
+                        </div>
+                        <button class="btn btn-white">
+                            <i data-lucide="download"></i>
+                            Install Desktop App
+                        </button>
+                    </section>
+
+                    <div class="filters-section">
+                        <div class="filter-buttons">
+                            <button class="btn btn-outline active">All Categories</button>
+                            <button class="btn btn-outline">Creative</button>
+                            <button class="btn btn-outline">Video</button>
+                            <button class="btn btn-outline">Web</button>
+                            <button class="btn btn-outline">3D</button>
+                        </div>
+                        <div class="search-input">
+                            <i data-lucide="search"></i>
+                            <input type="search" placeholder="Search apps...">
+                        </div>
+                    </div>
+
+                    <section class="section">
+                        <h2>New Releases</h2>
+                        <div class="apps-grid" id="newApps">
+                            <!-- New apps will be populated by JavaScript -->
+                        </div>
+                    </section>
+
+                    <section class="section">
+                        <h2>All Apps</h2>
+                        <div class="apps-grid" id="allApps">
+                            <!-- All apps will be populated by JavaScript -->
+                        </div>
+                    </section>
+                </div>
+
+                <div class="tab-content" id="files-tab">
+                    <section class="hero-section files-hero">
+                        <div class="hero-content">
+                            <h2>Your Creative Files</h2>
+                            <p>Access, manage, and share all your design files in one place.</p>
+                        </div>
+                        <div class="hero-actions">
+                            <button class="btn btn-outline-white">
+                                <i data-lucide="cloud"></i>
+                                Cloud Storage
+                            </button>
+                            <button class="btn btn-white">
+                                <i data-lucide="plus"></i>
+                                Upload Files
+                            </button>
+                        </div>
+                    </section>
+
+                    <div class="filters-section">
+                        <div class="filter-buttons">
+                            <button class="btn btn-outline active">
+                                <i data-lucide="file-text"></i>
+                                All Files
+                            </button>
+                            <button class="btn btn-outline">
+                                <i data-lucide="clock"></i>
+                                Recent
+                            </button>
+                            <button class="btn btn-outline">
+                                <i data-lucide="users"></i>
+                                Shared
+                            </button>
+                            <button class="btn btn-outline">
+                                <i data-lucide="star"></i>
+                                Favorites
+                            </button>
+                            <button class="btn btn-outline">
+                                <i data-lucide="trash"></i>
+                                Trash
+                            </button>
+                        </div>
+                        <div class="search-input">
+                            <i data-lucide="search"></i>
+                            <input type="search" placeholder="Search files...">
+                        </div>
+                    </div>
+
+                    <section class="section">
+                        <div class="section-header">
+                            <h2>All Files</h2>
+                            <div class="section-actions">
+                                <button class="btn btn-outline btn-sm">
+                                    <i data-lucide="panel-left"></i>
+                                    Filter
+                                </button>
+                                <button class="btn btn-outline btn-sm">
+                                    <i data-lucide="arrow-up-down"></i>
+                                    Sort
+                                </button>
+                            </div>
+                        </div>
+                        <div class="files-table" id="filesTable">
+                            <!-- Files table will be populated by JavaScript -->
+                        </div>
+                    </section>
+                </div>
+
+                <div class="tab-content" id="projects-tab">
+                    <section class="hero-section projects-hero">
+                        <div class="hero-content">
+                            <h2>Project Management</h2>
+                            <p>Organize your creative work into projects and collaborate with your team.</p>
+                        </div>
+                        <button class="btn btn-white">
+                            <i data-lucide="plus"></i>
+                            New Project
+                        </button>
+                    </section>
+
+                    <div class="filters-section">
+                        <div class="filter-buttons">
+                            <button class="btn btn-outline active">
+                                <i data-lucide="layers"></i>
+                                All Projects
+                            </button>
+                            <button class="btn btn-outline">
+                                <i data-lucide="clock"></i>
+                                Recent
+                            </button>
+                            <button class="btn btn-outline">
+                                <i data-lucide="users"></i>
+                                Shared
+                            </button>
+                            <button class="btn btn-outline">
+                                <i data-lucide="archive"></i>
+                                Archived
+                            </button>
+                        </div>
+                        <div class="search-input">
+                            <i data-lucide="search"></i>
+                            <input type="search" placeholder="Search projects...">
+                        </div>
+                    </div>
+
+                    <section class="section">
+                        <h2>Active Projects</h2>
+                        <div class="projects-grid" id="projectsGrid">
+                            <!-- Projects will be populated by JavaScript -->
+                        </div>
+                    </section>
+
+                    <section class="section">
+                        <h2>Project Templates</h2>
+                        <div class="templates-grid" id="templatesGrid">
+                            <!-- Templates will be populated by JavaScript -->
+                        </div>
+                    </section>
+                </div>
+
+                <div class="tab-content" id="learn-tab">
+                    <section class="hero-section learn-hero">
+                        <div class="hero-content">
+                            <h2>Learn & Grow</h2>
+                            <p>Expand your creative skills with tutorials, courses, and resources.</p>
+                        </div>
+                        <button class="btn btn-white">
+                            <i data-lucide="crown"></i>
+                            Upgrade to Pro
+                        </button>
+                    </section>
+
+                    <div class="filters-section">
+                        <div class="filter-buttons">
+                            <button class="btn btn-outline active">
+                                <i data-lucide="play"></i>
+                                All Tutorials
+                            </button>
+                            <button class="btn btn-outline">
+                                <i data-lucide="book-open"></i>
+                                Courses
+                            </button>
+                            <button class="btn btn-outline">
+                                <i data-lucide="lightbulb"></i>
+                                Tips & Tricks
+                            </button>
+                            <button class="btn btn-outline">
+                                <i data-lucide="trending-up"></i>
+                                Trending
+                            </button>
+                            <button class="btn btn-outline">
+                                <i data-lucide="bookmark"></i>
+                                Saved
+                            </button>
+                        </div>
+                        <div class="search-input">
+                            <i data-lucide="search"></i>
+                            <input type="search" placeholder="Search tutorials...">
+                        </div>
+                    </div>
+
+                    <section class="section">
+                        <h2>Featured Tutorials</h2>
+                        <div class="tutorials-grid" id="featuredTutorials">
+                            <!-- Tutorials will be populated by JavaScript -->
+                        </div>
+                    </section>
+
+                    <section class="section">
+                        <div class="section-header">
+                            <h2>Popular Courses</h2>
+                            <button class="btn btn-ghost">View All</button>
+                        </div>
+                        <div class="courses-list" id="popularCourses">
+                            <!-- Courses will be populated by JavaScript -->
+                        </div>
+                    </section>
+
+                    <section class="section">
+                        <h2>Learning Paths</h2>
+                        <div class="learning-paths-grid" id="learningPaths">
+                            <!-- Learning paths will be populated by JavaScript -->
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <!-- Theme Color Picker Modal -->
+        <div class="theme-color-modal" id="themeColorModal">
+            <div class="theme-color-content">
+                <h3>Choose Theme Color</h3>
+                <div class="color-options">
+                    <button class="color-option" data-color="indigo" style="background: #6366f1;" title="Indigo"></button>
+                    <button class="color-option" data-color="purple" style="background: #8b5cf6;" title="Purple"></button>
+                    <button class="color-option" data-color="pink" style="background: #ec4899;" title="Pink"></button>
+                    <button class="color-option" data-color="red" style="background: #ef4444;" title="Red"></button>
+                    <button class="color-option" data-color="orange" style="background: #f97316;" title="Orange"></button>
+                    <button class="color-option" data-color="amber" style="background: #f59e0b;" title="Amber"></button>
+                    <button class="color-option" data-color="green" style="background: #10b981;" title="Green"></button>
+                    <button class="color-option" data-color="teal" style="background: #14b8a6;" title="Teal"></button>
+                    <button class="color-option" data-color="blue" style="background: #3b82f6;" title="Blue"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
